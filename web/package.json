@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "express": "^4.18.2",
+    "googleapis": "^129.0.0",
     "preact": "^10.19.3"
   },
   "devDependencies": {
