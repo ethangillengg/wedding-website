@@ -1,3 +1,3 @@
 export const About = () => {
-  return <p>lorem ipsum.</p>;
+  return <p>lorem ipsum about.</p>;
 };
