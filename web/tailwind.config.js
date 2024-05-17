@@ -4,6 +4,9 @@ const colors = require("tailwindcss/colors");
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      serif: ["Castoro", "ui-serif", "serif"],
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",

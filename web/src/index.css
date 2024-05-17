@@ -8,6 +8,7 @@
   height: 100%;
   @apply bg-gum-50;
   @apply text-zinc-900;
+  @apply font-serif;
 
   color-scheme: light dark;
 
@@ -16,6 +17,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 @layer base {
   input {
     @apply bg-zinc-700;
