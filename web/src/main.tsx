@@ -3,6 +3,7 @@ import Router, { Route } from "preact-router";
 import { Link } from "preact-router/match";
 
 import { inject } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 
 import "./index.css";
 import petalsLeft from "./img/petals_left.png";
@@ -12,7 +13,9 @@ import { About } from "./pages/about";
 import { Itinerary } from "./pages/itinerary";
 
 const Main = () => {
+  // Vercel analytics and speed insights
   inject();
+  injectSpeedInsights();
   return (
     <>
       <img src={petalsLeft} class="h-screen absolute -z-50" />
