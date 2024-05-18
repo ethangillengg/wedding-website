@@ -12,6 +12,7 @@ import { About } from "./pages/about";
 import { Itinerary } from "./pages/itinerary";
 
 const Main = () => {
+  inject();
   return (
     <>
       <img src={petalsLeft} class="h-screen absolute -z-50" />
@@ -49,5 +50,4 @@ const Main = () => {
   );
 };
 
-inject();
 render(<Main />, document.getElementById("app")!);
