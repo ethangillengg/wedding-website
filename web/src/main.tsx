@@ -3,8 +3,8 @@ import Router, { Route } from "preact-router";
 import { Link } from "preact-router/match";
 
 import "./index.css";
-import petalsLeft from "./img/petals_left_low.png";
-import petalsRight from "./img/petals_right_low.png";
+import petalsLeft from "./img/petals_left.png";
+import petalsRight from "./img/petals_right.png";
 import { Home } from "./pages/home";
 import { About } from "./pages/about";
 
