@@ -7,11 +7,12 @@ import petalsLeft from "./img/petals_left.png";
 import petalsRight from "./img/petals_right.png";
 import { Home } from "./pages/home";
 import { About } from "./pages/about";
+import { Itinerary } from "./pages/itinerary";
 
 const Main = () => {
   return (
     <>
-      <img src={petalsLeft} class="h-screen absolute" />
+      <img src={petalsLeft} class="h-screen absolute -z-50" />
 
       <div class="mx-auto h-screen flex flex-col">
         <div class="flex mx-auto text-center py-4 text-2xl sm:flex-row sm:gap-8 md:gap-16 flex-col gap-4 ">
@@ -36,12 +37,12 @@ const Main = () => {
           <Router>
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/itinerary" component={About} />
+            <Route path="/itinerary" component={Itinerary} />
           </Router>
         </div>
       </div>
 
-      <img src={petalsRight} class="h-screen absolute bottom-0 right-0" />
+      <img src={petalsRight} class="h-screen absolute bottom-0 right-0 -z-50" />
     </>
   );
 };
