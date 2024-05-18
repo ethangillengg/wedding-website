@@ -2,6 +2,8 @@ import { render } from "preact";
 import Router, { Route } from "preact-router";
 import { Link } from "preact-router/match";
 
+import { inject } from "@vercel/analytics";
+
 import "./index.css";
 import petalsLeft from "./img/petals_left.png";
 import petalsRight from "./img/petals_right.png";
@@ -47,4 +49,5 @@ const Main = () => {
   );
 };
 
+inject();
 render(<Main />, document.getElementById("app")!);
