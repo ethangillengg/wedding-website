@@ -11,6 +11,7 @@ import { Home } from "./pages/home";
 import { FAQ } from "./pages/faq";
 import { Itinerary } from "./pages/itinerary";
 import { NavLink } from "./components/NavLink";
+import { createHashHistory } from "history";
 
 const Main = () => {
   // Vercel analytics and speed insights
@@ -45,7 +46,10 @@ const Main = () => {
         </div>
 
         <div class="flex justify-center h-full my-8 mx-auto w-1/2 max-w-sm md:max-w-xl">
-          <Router>
+          <Router
+            // @ts-ignore
+            history={createHashHistory()}
+          >
             <Route path="/" component={Home} />
             <Route path="/frequently-asked-questions" component={FAQ} />
             <Route path="/itinerary" component={Itinerary} />
