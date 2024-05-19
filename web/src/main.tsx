@@ -18,9 +18,20 @@ const Main = () => {
   injectSpeedInsights();
   return (
     <>
-      <img src={petalsLeft} class="h-screen absolute -z-50" />
+      <div class="flex justify-between min-h-dvh w-full absolute -z-50">
+        <img
+          src={petalsLeft}
+          class="max-h-dvh w-1/4 max-w-32 place-self-start"
+          style={{ objectFit: "cover" }}
+        />
+        <img
+          src={petalsRight}
+          class="max-h-dvh w-1/3 max-w-44 place-self-end"
+          style={{ objectFit: "cover" }}
+        />
+      </div>
 
-      <div class="mx-auto h-screen flex flex-col">
+      <div class="mx-auto h-dvh flex flex-col">
         <div class="flex mx-auto text-center py-4 text-2xl sm:flex-row sm:gap-8 md:gap-16 flex-col gap-4 ">
           <Link href="/" activeClassName="text-gum-500 underline">
             Home
@@ -47,8 +58,6 @@ const Main = () => {
           </Router>
         </div>
       </div>
-
-      <img src={petalsRight} class="h-screen absolute bottom-0 right-0 -z-50" />
     </>
   );
 };
