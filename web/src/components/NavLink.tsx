@@ -7,7 +7,7 @@ export const NavLink = ({
   return (
     <Link
       {...props}
-      class="visited:text-zinc-900 no-underline"
+      class="text-zinc-900 visited:text-zinc-900 no-underline"
       activeClassName="!text-gum-500 !underline"
     >
       {children}
