@@ -1,6 +1,12 @@
 import { render } from "preact";
 import Router, { Route } from "preact-router";
 
+// Localization (spanish)
+import { I18nextProvider } from "react-i18next";
+import i18next from "i18next";
+import common_en from "./translations/en/common.json";
+import common_es from "./translations/es/common.json";
+
 import { inject } from "@vercel/analytics";
 import { injectSpeedInsights } from "@vercel/speed-insights";
 
@@ -12,13 +18,27 @@ import { FAQ } from "./pages/faq";
 import { Itinerary } from "./pages/itinerary";
 import { NavLink } from "./components/NavLink";
 import { createHashHistory } from "history";
+import { LanguageSelector } from "./components/LanguageSelector";
 
 const Main = () => {
   // Vercel analytics and speed insights
   inject();
   injectSpeedInsights();
+  // Init localization framework
+  i18next.init({
+    interpolation: { escapeValue: false }, // React already does escaping
+    lng: "en", // language to use
+    resources: {
+      en: {
+        common: common_en,
+      },
+      es: {
+        common: common_es,
+      },
+    },
+  });
   return (
-    <>
+    <I18nextProvider i18n={i18next}>
       <div class="flex justify-between min-h-dvh w-full absolute -z-50">
         <img
           src={petalsLeft}
@@ -43,6 +63,7 @@ const Main = () => {
             Registry
           </NavLink>
           <NavLink href="/frequently-asked-questions">FAQ</NavLink>
+          <LanguageSelector class="ml-auto" />
         </div>
 
         <div class="flex justify-center h-full my-8 mx-auto w-1/2 max-w-sm md:max-w-xl">
@@ -56,7 +77,7 @@ const Main = () => {
           </Router>
         </div>
       </div>
-    </>
+    </I18nextProvider>
   );
 };
 
