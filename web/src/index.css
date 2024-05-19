@@ -18,12 +18,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 h1 {
   @apply font-bold italic text-4xl sm:text-5xl md:text-6xl text-gum-500;
 }
 
 h2 {
   @apply italic text-2xl sm:text-3xl md:text-4xl text-gum-500;
+}
+
+a {
+  @apply text-gum-500 underline;
+}
+
+a:visited {
+  @apply text-gum-800;
 }
 
 @layer base {

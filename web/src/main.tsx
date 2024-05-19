@@ -9,8 +9,9 @@ import "./index.css";
 import petalsLeft from "./img/petals_left.png";
 import petalsRight from "./img/petals_right.png";
 import { Home } from "./pages/home";
-import { About } from "./pages/about";
+import { FAQ } from "./pages/faq";
 import { Itinerary } from "./pages/itinerary";
+import { NavLink } from "./components/NavLink";
 
 const Main = () => {
   // Vercel analytics and speed insights
@@ -31,29 +32,23 @@ const Main = () => {
         />
       </div>
 
-      <div class="mx-auto h-dvh flex flex-col">
-        <div class="flex mx-auto text-center py-4 text-2xl sm:flex-row sm:gap-8 md:gap-16 flex-col gap-4 ">
-          <Link href="/" activeClassName="text-gum-500 underline">
-            Home
-          </Link>
-          <Link href="/itinerary" activeClassName="text-gum-500 underline">
-            Itinerary
-          </Link>
-          <a
+      <div class="mx-auto h-dvh flex flex-col overflow-y-auto">
+        <div class="flex mx-auto text-center py-4 text-2xl sm:flex-row sm:gap-8 md:gap-16 flex-col gap-4">
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/itinerary">Itinerary</NavLink>
+          <NavLink
             href="https://www.amazon.ca/wedding/share/diara-and-ethan"
             target="_blank"
           >
             Registry
-          </a>
-          <Link href="/about" activeClassName="text-gum-500 underline">
-            About
-          </Link>
+          </NavLink>
+          <NavLink href="/frequently-asked-questions">FAQ</NavLink>
         </div>
 
-        <div class="flex justify-center h-full mt-8">
+        <div class="flex justify-center h-full my-8 mx-auto w-1/2 max-w-sm md:max-w-xl">
           <Router>
             <Route path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Route path="/frequently-asked-questions" component={FAQ} />
             <Route path="/itinerary" component={Itinerary} />
           </Router>
         </div>

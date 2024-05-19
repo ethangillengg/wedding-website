@@ -15,7 +15,7 @@ export const Itinerary = () => {
           </ul>
         </div>
         <div class="mt-4">
-          <h2 class="mt-4">Reception</h2>
+          <h2>Reception</h2>
           <ul>
             <li>
               <strong>4:00PM</strong> - Cocktail hour
