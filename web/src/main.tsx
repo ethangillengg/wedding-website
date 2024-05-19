@@ -1,6 +1,5 @@
 import { render } from "preact";
 import Router, { Route } from "preact-router";
-import { Link } from "preact-router/match";
 
 import { inject } from "@vercel/analytics";
 import { injectSpeedInsights } from "@vercel/speed-insights";
