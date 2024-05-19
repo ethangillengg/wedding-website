@@ -4,7 +4,7 @@ import ringImgUrl from "../img/ring.png";
 export const Home = () => {
   return (
     <div class="flex flex-col w-min text-gum-500 items-center">
-      <img src={ringImgUrl} class="max-h-32 pb-4" />
+      <img src={ringImgUrl} class="h-32 pb-4" />
       <h1 class="font-bold italic text-4xl sm:text-5xl md:text-6xl mb-2">
         Diara&nbsp;
         <span class="font-normal text-3xl sm:text-4xl md:text-5xl">&</span>
