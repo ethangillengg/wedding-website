@@ -50,15 +50,15 @@ const Main = () => {
 const MainContent = () => {
   return (
     <>
-      <div class="flex justify-between min-h-dvh w-full absolute -z-50">
+      <div class="flex justify-between h-lvh w-full absolute -z-50">
         <img
           src={petalsLeft}
-          class="max-h-dvh w-1/4 max-w-32 place-self-start"
+          class="max-h-lvh w-1/4 max-w-32 place-self-start"
           style={{ objectFit: "cover" }}
         />
         <img
           src={petalsRight}
-          class="max-h-dvh w-1/3 max-w-44 place-self-end"
+          class="max-h-lvh w-1/3 max-w-44 place-self-end"
           style={{ objectFit: "cover" }}
         />
       </div>
