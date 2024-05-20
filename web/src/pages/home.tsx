@@ -1,5 +1,5 @@
 import { LinkButton } from "../components/LinkButton";
-import ringImgUrl from "../img/ring.png";
+import ringImgUrl from "../img/ring.webp";
 
 import { useTranslation } from "react-i18next";
 
