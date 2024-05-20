@@ -20,11 +20,11 @@
     "faq": {
       "attireLevel": {
         "q": "¿Qué nivel de vestimenta debo usar?",
-        "a": "Todos estarán vestidos con atuendo de <a href=\"https://www.brides.com/black-tie-optional-wedding-attire-4800698\">black-tie optional</a>. Esto significa trajes (opcionales), camisas de vestir y vestidos largos."
+        "a": "La vestimenta requerida será el black tie opcional. Por ejemplo, el uso de traje, camisas de vestir y vestidos largos."
       },
       "bringGift": {
         "q": "¿Debería llevar un regalo?",
-        "a": "Si te gustaría traer un regalo para apoyarnos, ¡sería genial! Si decides traer un regalo, por favor intenta comprar algo en <a href=\"https://www.amazon.ca/wedding/share/diara-and-ethan\">nuestro registro de Amazon</a>, o conseguir una tarjeta de regalo/vale."
+        "a": "Para hacer esta celebración aún más especial, te invitamos a considerar traer un <strong>detalle</strong> para compartir con nosotros. Ya sea algo de nuestra <a href=\"https://www.amazon.ca/wedding/share/diara-and-ethan\">mesa de regalos</a> o apreciaríamos cualquier contribución económica para ayudarnos a comenzar nuestra vida juntos."
       },
       "stayInBrooks": {
         "q": "¿Debería pasar la noche en Brooks?",
@@ -32,11 +32,11 @@
       },
       "bringMoney": {
         "q": "¿Debo traer dinero?",
-        "a": "Tendremos un evento sorpresa en el que los invitados pueden participar opcionalmente por dinero en efectivo, ¡así que asegúrate de traer algo si te gustaría unirte!"
+        "a": "Tendremos un evento especial llamado la \"Tanda Hungara\" o \"Baile del Dinero\" donde se les pone dinero a los novios para ayudar para la luna de miel. Si te gustaría participar en este evento, ¡Asegúrate de traer algo de efectivo!"
       },
       "dietaryRestriction": {
         "q": "Tengo una restricción dietética, ¿habrá comida para mí?",
-        "a": "Habrá opciones de comida para <em>Halal, veganos y vegetarianos</em>. Si te encuentras en una de estas categorías, por favor avísanos a través de nuestro formulario de RSVP para que podamos tener un conteo exacto de personas."
+        "a": "Habrá opciones de comida para <em>Halal, veganos y vegetarianos</em>. Si te encuentras en una de estas categorías, por favor de avisarnos a través de la confirmación de asistencia para que podamos tener un platillo especial para ti."
       }
     }
   }
