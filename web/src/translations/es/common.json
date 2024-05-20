@@ -1,5 +1,43 @@
 {
-  "wording": {
-    "rsvp": "test"
+  "Itinerary": "Itinerario",
+  "Home": "Inicio",
+  "Registry": "Regalos",
+  "Aug. 10th": "10 de agosto",
+  "RSVP": "Confirmar Asistencia",
+  "Ceremony": "Ceremonia",
+  "Reception": "Recepción",
+  "FAQ": "Información",
+  "pages": {
+    "itinerary":{
+      "130PM": "Recibimiento de los invitados",
+      "200PM": "Empieza la ceremonia",
+      "400PM": "Hora del cóctel",
+      "500PM": "Gran entrada",
+      "530PM": "Cena",
+      "730PM": "¡Disfruta la fiesta!",
+      "1200AM": "Se acabó la fiesta"
+    },
+    "faq": {
+      "attireLevel": {
+        "q": "¿Qué nivel de vestimenta debo usar?",
+        "a": "Todos estarán vestidos con atuendo de <a href=\"https://www.brides.com/black-tie-optional-wedding-attire-4800698\">black-tie optional</a>. Esto significa trajes (opcionales), camisas de vestir y vestidos largos."
+      },
+      "bringGift": {
+        "q": "¿Debería llevar un regalo?",
+        "a": "Si te gustaría traer un regalo para apoyarnos, ¡sería genial! Si decides traer un regalo, por favor intenta comprar algo en <a href=\"https://www.amazon.ca/wedding/share/diara-and-ethan\">nuestro registro de Amazon</a>, o conseguir una tarjeta de regalo/vale."
+      },
+      "stayInBrooks": {
+        "q": "¿Debería pasar la noche en Brooks?",
+        "a": "Si te gustaría quedarte hasta tarde con nosotros, te recomendamos reservar un hotel u otro tipo de alojamiento, pero es completamente opcional. Recuerda que el viaje a Calgary es de 2 horas."
+      },
+      "bringMoney": {
+        "q": "¿Debo traer dinero?",
+        "a": "Tendremos un evento sorpresa en el que los invitados pueden participar opcionalmente por dinero en efectivo, ¡así que asegúrate de traer algo si te gustaría unirte!"
+      },
+      "dietaryRestriction": {
+        "q": "Tengo una restricción dietética, ¿habrá comida para mí?",
+        "a": "Habrá opciones de comida para <em>Halal, veganos y vegetarianos</em>. Si te encuentras en una de estas categorías, por favor avísanos a través de nuestro formulario de RSVP para que podamos tener un conteo exacto de personas."
+      }
+    }
   }
 }

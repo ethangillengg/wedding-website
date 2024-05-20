@@ -2,7 +2,7 @@ import { render } from "preact";
 import Router, { Route } from "preact-router";
 
 // Localization (spanish)
-import { I18nextProvider } from "react-i18next";
+import { I18nextProvider, useTranslation } from "react-i18next";
 import i18next from "i18next";
 import common_en from "./translations/en/common.json";
 import common_es from "./translations/es/common.json";
@@ -16,29 +16,41 @@ import petalsRight from "./img/petals_right.png";
 import { Home } from "./pages/home";
 import { FAQ } from "./pages/faq";
 import { Itinerary } from "./pages/itinerary";
-import { NavLink } from "./components/NavLink";
 import { createHashHistory } from "history";
-import { LanguageSelector } from "./components/LanguageSelector";
+import { Navbar } from "./components/Navbar";
 
 const Main = () => {
   // Vercel analytics and speed insights
   inject();
   injectSpeedInsights();
   // Init localization framework
-  i18next.init({
-    interpolation: { escapeValue: false }, // React already does escaping
-    lng: "en", // language to use
-    resources: {
-      en: {
-        common: common_en,
+  i18next
+    // .use(initReactI18next)
+    .init({
+      interpolation: { escapeValue: false }, // React already does escaping
+      lng: "en", // language to use
+      resources: {
+        en: {
+          common: common_en,
+        },
+        es: {
+          common: common_es,
+        },
       },
-      es: {
-        common: common_es,
-      },
-    },
-  });
+    });
+
   return (
     <I18nextProvider i18n={i18next}>
+      <MainContent />
+    </I18nextProvider>
+  );
+};
+
+// Need seperate component for useTranslation
+const MainContent = () => {
+  const { t } = useTranslation("common");
+  return (
+    <>
       <div class="flex justify-between min-h-dvh w-full absolute -z-50">
         <img
           src={petalsLeft}
@@ -52,21 +64,9 @@ const Main = () => {
         />
       </div>
 
-      <div class="mx-auto h-dvh flex flex-col overflow-y-auto">
-        <div class="flex mx-auto text-center py-4 text-2xl sm:flex-row sm:gap-8 md:gap-16 flex-col gap-4">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/itinerary">Itinerary</NavLink>
-          <NavLink
-            href="https://www.amazon.ca/wedding/share/diara-and-ethan"
-            target="_blank"
-          >
-            Registry
-          </NavLink>
-          <NavLink href="/frequently-asked-questions">FAQ</NavLink>
-          <LanguageSelector class="ml-auto" />
-        </div>
-
-        <div class="flex justify-center h-full my-8 mx-auto w-1/2 max-w-sm md:max-w-xl">
+      <div class="mx-auto h-dvh flex flex-col overflow-y-auto ">
+        <Navbar />
+        <div class="flex justify-center mt-8 mx-auto w-1/2 bg-gum-50 max-w-sm md:max-w-xl">
           <Router
             // @ts-ignore
             history={createHashHistory()}
@@ -76,8 +76,9 @@ const Main = () => {
             <Route path="/itinerary" component={Itinerary} />
           </Router>
         </div>
+        <div class="min-h-8 bg-gum-50 w-1/2 max-w-sm md:max-w-xl mx-auto" />
       </div>
-    </I18nextProvider>
+    </>
   );
 };
 

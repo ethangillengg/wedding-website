@@ -1,5 +1,36 @@
 {
-  "wording": {
-    "rsvp": "RSVP"
+  "pages": {
+    "itinerary":{
+      "130PM": "Guests arrive",
+      "200PM": "Ceremony begins (doors close)",
+      "400PM": "Cocktail hour",
+      "500PM": "Couple's grand entrance",
+      "530PM": "Dinner time",
+      "730PM": "Party time",
+      "1200AM": "Home time"
+    },
+    "faq": {
+      "attireLevel": {
+        "q": "What Level of Attire Should I Wear?",
+        "a": "Everyone will be dressed in <a href=\"https://www.brides.com/black-tie-optional-wedding-attire-4800698\">black-tie optional</a> attire. This means suits (optional), dress shirts, and long dresses."
+      },
+      "bringGift": {
+        "q": "Should I Bring a Gift?",
+        "a": "If you would like to bring a gift to help support us, that would be awesome! If you decide to bring a gift, please try to buy something on <a href=\"https://www.amazon.ca/wedding/share/diara-and-ethan\">our Amazon registry</a>, or get a gift card/voucher."
+      },
+      "stayInBrooks": {
+        "q": "Should I Stay the Night in Brooks?",
+        "a": "If you would like to party late with us we would recommend booking a hotel or other accomodations, but it is completely optional. Remember that the drive to Calgary is 2 hours."
+      },
+      "bringMoney": {
+        "q": "Should I Bring Money?",
+        "a": "We will have a suprise event that guests may optionally participate in for cash, so be sure to bring some if you would like to join!"
+      },
+      "dietaryRestriction": {
+        "q": "I Have A Dietary Restriction, Will There be Food for Me?",
+        "a": "There will be food options for <em>Halal, vegan and vegetarian</em>. If you are in one of these categories please let us know via our RSVP form so that we can get an accurate head count."
+      }
+    }
   }
 }
+

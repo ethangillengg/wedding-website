@@ -13,11 +13,11 @@ export const Home = () => {
         <span class="font-normal text-3xl sm:text-4xl md:text-5xl">&</span>
         &nbsp;Ethan
       </h1>
-      <h2 class="mb-4 sm:mb-8">Aug. 10th</h2>
+      <h2 class="mb-4 sm:mb-8">{t("Aug. 10th")}</h2>
 
-      <div class="flex flex-col gap-4 text-2xl sm:text-3xl md:text-4xl">
+      <div class="text-wrap w-min flex flex-col gap-4 text-2xl sm:text-3xl md:text-4xl">
         <LinkButton href="https://forms.gle/7jqXUvQzjxSxhbvq6">
-          {t("wording.rsvp")}
+          {t("RSVP")}
         </LinkButton>
       </div>
     </div>
