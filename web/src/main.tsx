@@ -11,8 +11,8 @@ import { inject } from "@vercel/analytics";
 import { injectSpeedInsights } from "@vercel/speed-insights";
 
 import "./index.css";
-import petalsLeft from "./img/petals_left.png";
-import petalsRight from "./img/petals_right.png";
+import petalsLeft from "./img/pl.png";
+import petalsRight from "./img/pr.png";
 import { Home } from "./pages/home";
 import { FAQ } from "./pages/faq";
 import { Itinerary } from "./pages/itinerary";
