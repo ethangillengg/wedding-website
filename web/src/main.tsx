@@ -2,7 +2,7 @@ import { render } from "preact";
 import Router, { Route } from "preact-router";
 
 // Localization (spanish)
-import { I18nextProvider, useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import common_en from "./translations/en/common.json";
 import common_es from "./translations/es/common.json";
@@ -48,7 +48,6 @@ const Main = () => {
 
 // Need seperate component for useTranslation
 const MainContent = () => {
-  const { t } = useTranslation("common");
   return (
     <>
       <div class="flex justify-between min-h-dvh w-full absolute -z-50">
