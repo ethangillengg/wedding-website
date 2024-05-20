@@ -5,7 +5,7 @@ import { NavLink } from "./NavLink";
 export const Navbar = () => {
   const { t } = useTranslation("common");
   return (
-    <div class="flex mx-auto text-center lg:flex-row lg:gap-8 lg:gap-16 flex-col gap-4 py-4 text-2xl lg:text-2xl md:text-3xl">
+    <div class="flex mx-auto max-w-screen-md w-full mx-auto text-center lg:flex-row lg:justify-evenly lg:gap-0 flex-col gap-4 py-4 text-2xl lg:text-2xl md:text-3xl">
       <NavLink href="/">{t("Home")}</NavLink>
       <NavLink href="/itinerary">{t("Itinerary")}</NavLink>
       <NavLink
@@ -15,7 +15,7 @@ export const Navbar = () => {
         {t("Registry")}
       </NavLink>
       <NavLink href="/frequently-asked-questions">{t("FAQ")}</NavLink>
-      <LanguageSelector class="sm:ml-auto ml-0" />
+      <LanguageSelector />
     </div>
   );
 };
