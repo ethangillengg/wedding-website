@@ -22,7 +22,7 @@ export const LanguageSelector = (
         onClick={() => i18n.changeLanguage(nextLang)}
       >
         <img
-          class="h-5 w-7 mr-2 my-1 rounded drop-shadow"
+          class="h-5 w-8 mr-2 my-1 rounded drop-shadow object-cover"
           src={langOptsImages[i18n.language as keyof typeof langOptsImages]}
         />
         {i18n.language.toUpperCase()}
