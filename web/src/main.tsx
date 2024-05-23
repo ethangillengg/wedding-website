@@ -20,65 +20,69 @@ import { createHashHistory } from "history";
 import { Navbar } from "./components/Navbar";
 
 const Main = () => {
-  // Vercel analytics and speed insights
-  inject();
-  injectSpeedInsights();
-  // Init localization framework
-  i18next
-    // .use(initReactI18next)
-    .init({
-      interpolation: { escapeValue: false }, // React already does escaping
-      lng: "en", // language to use
-      resources: {
-        en: {
-          common: common_en,
-        },
-        es: {
-          common: common_es,
-        },
-      },
-    });
+	// Vercel analytics and speed insights
+	inject();
+	injectSpeedInsights();
+	// Init localization framework
+	i18next
+		// .use(initReactI18next)
+		.init({
+			interpolation: { escapeValue: false }, // React already does escaping
+			lng: "en", // language to use
+			resources: {
+				en: {
+					common: common_en,
+				},
+				es: {
+					common: common_es,
+				},
+			},
+		});
 
-  return (
-    <I18nextProvider i18n={i18next}>
-      <MainContent />
-    </I18nextProvider>
-  );
+	return (
+		<I18nextProvider i18n={i18next}>
+			<MainContent />
+		</I18nextProvider>
+	);
 };
 
 // Need seperate component for useTranslation
 const MainContent = () => {
-  return (
-    <>
-      <div class="flex justify-between h-lvh w-full absolute -z-50">
-        <img
-          src={petalsLeft}
-          class="max-h-lvh w-1/4 max-w-32 place-self-start"
-          style={{ objectFit: "cover" }}
-        />
-        <img
-          src={petalsRight}
-          class="max-h-lvh w-1/3 max-w-44 place-self-end"
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+	return (
+		<>
+			<div class="grid grid-rows-1 grid-cols-[minmax(50px,_0.10fr)_1fr_minmax(60px,_0.13fr)] max-h-lvh h-dvh w-full overflow-auto">
+				<img
+					src={petalsLeft}
+					class="sticky top-0 max-h-lvh"
+					style={{ objectFit: "cover" }}
+				/>
 
-      <div class="mx-auto h-dvh flex flex-col overflow-y-auto ">
-        <Navbar />
-        <div class="flex justify-center mt-8 mx-auto w-1/2 bg-gum-50 max-w-sm md:max-w-xl">
-          <Router
-            // @ts-ignore
-            history={createHashHistory()}
-          >
-            <Route path="/" component={Home} />
-            <Route path="/frequently-asked-questions" component={FAQ} />
-            <Route path="/itinerary" component={Itinerary} />
-          </Router>
-        </div>
-        <div class="min-h-8 bg-gum-50 w-1/2 max-w-sm md:max-w-xl mx-auto" />
-      </div>
-    </>
-  );
+				<div class="flex mx-auto w-full flex-col ">
+					<Navbar />
+					<div class="flex justify-center mt-8 mx-auto w-1/2 bg-gum-50 max-w-sm md:max-w-xl">
+						<Router
+							// @ts-ignore
+							history={createHashHistory()}
+						>
+							<Route path="/" component={Home} />
+							<Route path="/frequently-asked-questions" component={FAQ} />
+							<Route path="/itinerary" component={Itinerary} />
+						</Router>
+					</div>
+					<div class="min-h-8 bg-gum-50 w-1/2 max-w-sm md:max-w-xl mx-auto" />
+				</div>
+				<div class="sticky top-0 pt-auto flex min-h-lvh">
+					<img
+						src={petalsRight}
+						class="h-min place-self-end"
+						style={{
+							objectFit: "cover",
+						}}
+					/>
+				</div>
+			</div>
+		</>
+	);
 };
 
 render(<Main />, document.getElementById("app")!);
