@@ -59,7 +59,7 @@ const MainContent = () => {
 
 				<div class="flex mx-auto w-full flex-col ">
 					<Navbar />
-					<div class="flex justify-center mt-8 mx-auto w-1/2 bg-gum-50 max-w-sm md:max-w-xl">
+					<div class="flex justify-center mt-8 mx-auto px-4 w-full sm:w-1/2 bg-gum-50 max-w-sm md:max-w-xl">
 						<Router
 							// @ts-ignore
 							history={createHashHistory()}
